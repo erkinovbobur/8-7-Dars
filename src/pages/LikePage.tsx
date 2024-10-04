@@ -8,7 +8,7 @@ const LikePage: React.FC = () => {
   const likedProducts = useAppSelector((state) => state.wishlist.items);
 
   if (likedProducts.length === 0) {
-    return <div className={styles.message}>git </div>;
+    return <div className={styles.message}></div>;
   }
 
   return (
