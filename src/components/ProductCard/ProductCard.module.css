@@ -1,4 +1,4 @@
-/* src/components/ProductCard/ProductCard.module.css */
+
 
 .card {
   border: 1px solid #e0e0e0;
@@ -7,24 +7,24 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: #ffffff; /* Asosiy fon rangini o'zgartiring */
+  background-color: #ffffff; 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Hoverda fon o'zgarishi uchun */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; 
 }
 
 .card:hover {
   transform: translateY(-10px);
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
-  background-color: #f0f8ff; /* Hoverda fon rangini o'zgartirish - `Alice Blue` */
+  background-color: #f0f8ff; 
 }
 
 .image {
   width: 100%;
   height: 250px;
   object-fit: cover;
-  border-radius: 12px; /* Rasm qirralarini yumshatish */
+  border-radius: 12px;
   margin-bottom: 16px;
-  border: 2px solid #3498db; /* Rasmlarga qirra qo'shish */
+  border: 2px solid #3498db;
 }
 
 .info {
@@ -43,7 +43,7 @@
 }
 
 .info h3:hover {
-  color: #2980b9; /* Sarlavha rangini hoverda o'zgartirish */
+  color: #2980b9;
 }
 
 .info p {
@@ -53,15 +53,16 @@
 }
 
 .price {
-  font-size: 1.4rem; /* Narxni kattaroq qilish */
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem; 
   font-weight: bold;
-  color: #27ae60; /* Narx rangini o'zgartirish - `Green` */
+  color: #27ae60; 
 }
 
 .category {
-  background-color: #3498db; /* Kategoriya fon rangini o'zgartirish - `Blue` */
-  color: white; /* Matn rangini o'zgartirish */
-  padding: 4px 8px;
+  background-color: #3498db; 
+  color: white; 
   border-radius: 4px;
   display: inline-block;
   font-size: 0.9rem;
@@ -71,30 +72,29 @@
 .rating {
   display: flex;
   align-items: center;
-  color: #f39c12;
+  color: #bdbd1f;
 }
 
 .stock {
-  color: #e74c3c; /* Zaxira rangini o'zgartirish */
+  color: #e74c3c;
   font-weight: bold;
 }
 
 .brand {
-  color: #2980b9; /* Brend rangini o'zgartirish */
+  color: #2980b9; 
   font-style: italic;
 }
 
 .likeButton {
-  position: absolute;
-  top: 16px;
+
   right: 16px;
   background: rgba(255, 255, 255, 0.8);
   border: none;
-  border-radius: 50%;
+  border-radius: 70%;
   padding: 8px;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Hoverda o'zgarish */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
 }
 
 .likeButton:hover {

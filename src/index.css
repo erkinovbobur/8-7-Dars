@@ -1,10 +1,10 @@
-/* src/index.css */
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  background-color: #e1f5fe; /* Fon rangini o'zgartirish - Pastel ko'k */
+  background-color: #e1f5fe; 
 }
 
 * {

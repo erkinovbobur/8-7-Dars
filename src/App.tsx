@@ -11,23 +11,23 @@ import 'react-toastify/dist/ReactToastify.css';
 const App: React.FC = () => {
   const dispatch = useAppDispatch();
 
-  // Sahifa yuklanayotganda mahsulotlarni olish uchun redux orqali chaqirish
+ 
   useEffect(() => {
     dispatch(getProducts());
   }, [dispatch]);
 
   return (
     <div>
-      {/* Header componenti */}
+     
       <Header />
       
-      {/* Sahifalar o'rtasidagi marshrutlar */}
+   
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/like" element={<LikePage />} />
       </Routes>
 
-      {/* Toast xabarlari uchun konfiguratsiya */}
+    
       <ToastContainer 
         position="top-right" 
         autoClose={3000} 

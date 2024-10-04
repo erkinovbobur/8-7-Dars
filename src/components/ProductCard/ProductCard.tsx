@@ -1,8 +1,12 @@
+import { AiOutlineDollar } from "react-icons/ai"; 
+
+import { AiTwotoneStar } from "react-icons/ai"; 
+import { AiFillLike } from "react-icons/ai"; 
 
 import React from 'react';
 import styles from './ProductCard.module.css'; 
 import { Product } from '../../types/Product';
-import { FaHeart, FaStar } from 'react-icons/fa';
+
 import { useAppDispatch, useAppSelector } from '../../hooks';
 import { toggleLike } from '../../features/wishlist/wishlistSlice';
 import { toast } from 'react-toastify'; 
@@ -20,9 +24,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const handleLike = () => {
     dispatch(toggleLike(product));
     if (!isLiked) {
-      toast.success(`${product.title} sevimlilarga qo'shildi.`);
+      toast.success(`${product.title} 😊`);
     } else {
-      toast.info(`${product.title} sevimlilardan olib tashlandi.`);
+      toast.info(`${product.title} 😞`);
     }
   };
 
@@ -34,17 +38,19 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           <h3>{product.title}</h3>
           <span className={styles.category}>{product.category}</span>
         </div>
-        <p className={styles.price}>${product.price}</p>
+        <p className={styles.price}><AiOutlineDollar />{product.price}</p>
         <div>
           <span className={styles.rating}>
-            <FaStar /> {product.rating}
+           <AiTwotoneStar />{product.rating}
           </span>
-          <span className={styles.stock}>In Stock: {product.stock}</span>
+        
         </div>
         <p className={styles.brand}>{product.brand}</p>
       </div>
       <button onClick={handleLike} className={styles.likeButton}>
-        <FaHeart color={isLiked ? 'red' : 'grey'} />
+       <AiFillLike color={isLiked ? 'red' : 'grey'} />
+       
+        
       </button>
     </div>
   );
