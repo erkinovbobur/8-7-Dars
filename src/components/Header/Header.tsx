@@ -12,23 +12,18 @@ const Header: React.FC = () => {
 
   return (
     <header className={styles.header}>
-      <h1>Shopping App</h1>
-      <nav>
-        <Link
-          to="/"
-          className={`${styles.link} ${
-            location.pathname === '/' ? styles.active : ''
-          }`}
-        >
+    <nav>
+        <Link to="/" className={`${styles.link} ${location.pathname === '/' ? styles.active : ''}`}>
           Home
         </Link>
+        <h1>Shopping Liked</h1>
         <Link
           to="/like"
           className={`${styles.link} ${
             location.pathname === '/like' ? styles.active : ''
           }`}
         >
-          <FaHeart color="red" /> {wishlistCount > 0 && `(${wishlistCount})`}
+          <FaHeart color="red" /> {wishlistCount > 0 && `${wishlistCount}`}
         </Link>
       </nav>
     </header>

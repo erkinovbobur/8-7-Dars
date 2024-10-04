@@ -9,7 +9,6 @@ import { Product } from '../../types/Product';
 
 import { useAppDispatch, useAppSelector } from '../../hooks';
 import { toggleLike } from '../../features/wishlist/wishlistSlice';
-import { toast } from 'react-toastify'; 
 
 interface ProductCardProps {
   product: Product;
@@ -23,11 +22,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
   const handleLike = () => {
     dispatch(toggleLike(product));
-    if (!isLiked) {
-      toast.success(`${product.title} 😊`);
-    } else {
-      toast.info(`${product.title} 😞`);
-    }
+   
   };
 
   return (

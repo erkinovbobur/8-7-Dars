@@ -1,4 +1,4 @@
-// src/pages/LikePage.tsx
+
 import React from 'react';
 import { useAppSelector } from '../hooks';
 import ProductCard from '../components/ProductCard/ProductCard';
